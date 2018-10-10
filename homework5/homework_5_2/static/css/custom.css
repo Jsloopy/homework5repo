@@ -1,0 +1,137 @@
+#my_pic{   
+width:275px;
+height:275px;
+border-radius:50%;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: 'Josefin Sans';
+  color: #ffffff;
+}
+
+
+.black{
+  color: #000000
+}
+
+.body_color{ background: #2e2f2f}
+
+
+#underline-expand{
+  max-width: 23rem
+}
+
+hr.star-light,
+hr.star-dark {
+  margin-top: .1rem;
+}
+
+
+hr.star-light {
+  border-color: #335896;
+}
+
+header.masthead h2 {
+  font-size: 1.3rem;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #335896;
+  color: #fff;
+}
+
+#contact{
+  height: 700px
+}
+
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  font-family: 'Ubuntu', sans-serif;
+  }
+
+  @media (min-width: 992px) {
+  section h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  @media (min-width: 992px) {
+	#mainNav {
+	    padding-top: 1rem;
+    padding-bottom: 1rem;
+	}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #5cfd72;}
+
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+    color: #fff;
+    background: #5cfd72;
+  }
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+    color: #fff;
+    background: #5cfd72;
+
+header.masthead h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+}
+
+
+
+.text-primary {
+  color: #2e2f2f !important;
+}
+
+.text-secondary {
+  color: #335896 !important;
+}
+
+.centered {width: 50%;
+    	margin: auto;
+}
+
+.body_color{background-color: #2e2f2f
+}
+
+#portfolio{
+	background-color: #2e2f2f
+
+}
+
+.white_text{
+	color: #ffffff;
+}
+
+
+.bg-primary {
+  background-color: #2e2f2f !important;
+}
+
+.bg-secondary {
+  background-color: #335896 !important;
+}
+
+#underline-expand{
+  max-width: 23rem
+}
+
+
+
+
+

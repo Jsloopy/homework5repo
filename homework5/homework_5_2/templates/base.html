@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{{my_blog}}</title>
+  </head>
+   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  
+
+    <!-- Plugin CSS -->
+    <link href="css/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!--the icon for linkedin and gitbuh -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/my_custom.css" rel="stylesheet">
+
+
+  <body class="body_color">
+  	<nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="homepage.html">Sloop's Tech Blog</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+            {% for page in pages %}
+              {% if checker == page.link %}
+              *<li class="nav-item mx-0 mx-lg-1">
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ page.link }}">{{ page.title }}</a>
+              </li>
+              {% else %}
+              <li class="nav-item mx-0 mx-lg-1">
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ page.link }}">{{ page.title }}</a>
+                 </li>
+                 {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+        <!-- Content Section Starts -->
+    <section class="bg-primary text-white mb-0" id="about" id="resume_spacing">
+      <div class="container">
+
+{{ content|safe }}
+
+<footer class="footer text-center fixed-bottom">
+    <div class="container">
+      <div class="row">
+        
+        <div class="centered col-12 mb-5 mb-lg-0">
+          <h4 class="text-uppercase mb-4">My Links</h4>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jordan-sloop-234001a1/"  class=black> 
+                  <i class="fab fa-linkedin fa-3x "></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://github.com/Jsloopy" class=black>
+                  <i class="fab fa-github fa-3x"></i>  
+                </a>
+            </li>
+           
+            <li class="list-inline-item">
+                <a href="mailto:jsloop310@gmail.com" class=black>
+                  <i class="fas fa-envelope-open fa-3x"></i>
+                </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>
