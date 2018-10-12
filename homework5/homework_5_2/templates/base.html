@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,7 +13,7 @@
     
 
     <!-- Bootstrap core CSS -->
-    <link href="css/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/vendor/bootstrap/css/bootstrap.css"%}" >
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
@@ -23,14 +24,14 @@
   
 
     <!-- Plugin CSS -->
-    <link href="css/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="{% static "css/vendor/magnific-popup/magnific-popup.css"%}" rel="stylesheet" type="text/css">
 
     <!--the icon for linkedin and gitbuh -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="css/freelancer.css" rel="stylesheet">
-    <link href="css/my_custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "css/freelancer.css"%}">
+    <link rel="stylesheet" href="{% static "css/my_custom.css"%}">
 
 
   <body class="body_color">
@@ -45,13 +46,13 @@
           <ul class="navbar-nav ml-auto">
 
             {% for page in pages %}
-              {% if checker == page.link %}
+              {% if checker == page %}
               *<li class="nav-item mx-0 mx-lg-1">
-                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ page.link }}">{{ page.title }}</a>
+                <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ page }}">{{ page.title }}</a>
               </li>
               {% else %}
               <li class="nav-item mx-0 mx-lg-1">
-                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ page.link }}">{{ page.title }}</a>
+                  <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{ page }}">{{ page.title }}</a>
                  </li>
                  {% endif %}
             {% endfor %}
@@ -63,7 +64,9 @@
     <section class="bg-primary text-white mb-0" id="about" id="resume_spacing">
       <div class="container">
 
-{{ content|safe }}
+{{ content|safe}}
+{%block content%}
+{% endblock %}
 
 <footer class="footer text-center fixed-bottom">
     <div class="container">
