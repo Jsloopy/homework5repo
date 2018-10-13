@@ -4,10 +4,11 @@ import views
 
 # In this example, we've separated out the views.py into a new file
 urlpatterns = [
-    path('', views.homepage),
+    path('/', views.homepage),
     path('bio/', views.bio),
     path('contact/', views.contact),
     path('resume/', views.resume),
+    path('repos/',)
 ]
 
 # Boilerplate to include static files
