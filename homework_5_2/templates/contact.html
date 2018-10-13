@@ -4,8 +4,12 @@
 <h2 class="text-center text-uppercase white_text mb-0">{{title}}</h2>
 <hr id="underline-expand"class="star-dark mb-5 underline">
 <div class="row">
+    {% for item in github_repos %}
+      <a href="{{item.html_url}}">{{item.name}}</a>
+    {% endfor %}
   <div class="col-lg-8 mx-auto">
 <form name="sentMessage" id="contactForm" novalidate="novalidate">
+
   </div>
 </div>
 </div>

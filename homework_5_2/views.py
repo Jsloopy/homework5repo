@@ -11,7 +11,6 @@ for single in all_html_files:
     holder.append(name_only)
 
 def homepage(request):
-    # content_html = open("content/homepage.html").read()
     context = {
         "title": "My Tech Blog", 
         "pages": holder
@@ -20,25 +19,21 @@ def homepage(request):
     
 
 def bio(request):
-    # content_html = open("content/bio.html").read() 
     context = {
-        # "content": content_html,
         "title": "Bio",
         "pages": holder
     }
     return render(request, "bio.html", context)
 
-# def contact(request):
-#     context = {
-#         "title": "Contact Me",
-#         "pages": holder
-#     }
-#     return render(request, "contact.html", context)
+def contact(request):
+    context = {
+        "title": "Contact Me",
+        "pages": holder
+    }
+    return render(request, "contact.html", context)
 
 def resume(request):
-    # content_html = open("content/resume.html").read() 
     context = {
-        # "content": content_html, 
         "title": "Resume",
         "pages": holder
     }
@@ -47,13 +42,12 @@ def resume(request):
 def contact(request):
     response = requests.get('https://api.github.com/users/Jsloopy/repos')
     repos = response.json()
-    # for item in repos:
-    #     print(item["owner"]["url"])
     context = {
-        "title": "Contact Me",
-        "github_repos": repos,
-        "pages": holder
+        "title": "Contact",
+        "pages": holder,
+        "github_repos": repos
     }
+    
     return render(request, "contact.html", context)
 
-# Create your views here.
+
